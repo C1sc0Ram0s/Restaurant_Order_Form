@@ -6,14 +6,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-
+        header{
+            margin: 0;
+            padding: 0;
+        }
+        #title{
+            font-size: xx-large;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #tag{
+            font-size: 20px;
+        }
+        #bread{
+            margin: 10px;
+            padding: 10px;
+        }
+        #submitButton{
+            font-size: 25px;
+        }
     </style>
 </head>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.pnMMU1xYz82hqhyJir7LKQHaHa%26pid%3DApi&f=1" height="80px" width="100px">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Billy Bobs Burger & Subs</a>
+                <a class="navbar-brand" href="#" id="title"><b>Billy Bobs Burger & Subs</b><br><p id="tag">-Food with Attitude</p></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -22,22 +41,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Language
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -49,7 +60,7 @@
         </nav>
     </header>
 <body>
-    <h1>Order Form</h1>
+    <h3>Order Form</h3>
     <div class="container m-1">
         <form action="www.google.com" method="post">
             <div class="btn-group btn-group-lg" role="group" aria-label="Basic radio toggle button group">
@@ -58,29 +69,67 @@
 
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
                 <label class="btn btn-outline-primary" for="btnradio2">Sub</label>
-            </div><br><br>
+            </div>
 
-            <h2>Contact Information</h2>
+            <div id="bread">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">White Bread</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Wheat Bread</label>
+                </div>
+            </div>
+
+            <h4>Customize Your Order</h4>
+            <h6>Sauces</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="ketchupCheck">
+                <label class="form-check-label" for="ketchupCheck">
+                    Ketchup
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="mayoCheck">
+                <label class="form-check-label" for="mayoCheck">
+                    Mayo
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="mustardCheck">
+                <label class="form-check-label" for="mustardCheck">
+                    Mustard
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="bbqCheck">
+                <label class="form-check-label" for="bbqCheck">
+                    BBQ
+                </label>
+            </div><br>
+
+            <h3>Contact Information</h3>
             <label for="firstName">First Name</label>
             <input type="text" name="firstName" id="firstName" placeholder="Enter First Name" required/>
-            <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name" required />
+            <label for="lastName">First Name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name" required/>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
             </div>
             <label for="password">Password</label>
             <input class="form-control" type="password" name="password" placeholder="password" id="password">
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="comments" class="form-label">Comments</label>
+                <textarea class="form-control" id="comments" rows="3"></textarea>
             </div>
-            <input type="submit" value="Submit Me" onclick="onSubmitClick()">
+            <input class="btn-primary" type="submit" value="Submit Order" id="submitButton" onclick="onSubmitClick()">
         </form>
     </div>
     <script type="application/javascript">
         function onSubmitClick(){
-            var firstName = document.getElementById("firstName").value
+            let firstName = document.getElementById("firstName").value
             alert(firstName + ", your order has been placed.")
         }
 
